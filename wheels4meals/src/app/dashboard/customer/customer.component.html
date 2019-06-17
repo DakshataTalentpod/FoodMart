@@ -1,0 +1,72 @@
+<mat-toolbar color="primary">
+    <span style="font-family: 'Playball', cursive;font-size: 28px">Wheels4Meals</span>
+    <span class="example-fill-remaining-space"></span>
+    <span class="text-logout"><a>Logout</a></span>
+</mat-toolbar>
+  <br>
+<div fxLayout="row"
+  class="container"
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutGap="20px"
+  fxLayoutGap.xs="0">
+      <h3>Restaurants</h3>
+      <span fxFlex></span>
+      <button mat-raised-button color="primary" style="height: 40px">My Orders</button>
+  </div>
+
+  <div fxLayout="row"
+  class="container"
+  fxLayout
+  fxLayout.xs="column"
+  fxLayoutGap="20px"
+  fxLayoutGap.xs="0">
+  <p class="mat-form-field--inline">
+      <mat-form-field>
+          <mat-label>Restaurants Name</mat-label>
+          <input matInput [(ngModel)]="name" (input)="Search()">
+        </mat-form-field>
+      <mat-form-field>
+          <mat-label>Location</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let rest of restaurant" value={{rest.address.street}}>
+              {{rest.address.street}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+    </p>
+    <span fxFlex></span>
+    <mat-form-field  style="margin-top: 40px">
+        <mat-label>Sort by Restaurants</mat-label>
+        <mat-select >
+            <mat-option value="ASC" (click)="sortData() ">ASC</mat-option>
+            <mat-option value="DESC" (click)="sortDataasc() ">DESC</mat-option>
+        </mat-select>
+      </mat-form-field>
+  </div>
+
+        <div fxLayout="row wrap" class="container" fxLayoutGap="15px">
+           <div *ngFor="let restlist of restaurant" style="width:22%;"  >
+            <a [routerLink]="['/foodList',restlist.id]">
+                <mat-card class="example-card">
+                  <img mat-card-image src="{{restlist.imageUrl}}" width="250px" height="250px" >
+                    <mat-card-content>
+                      <p class="card-title">
+                       {{restlist.name}}
+                      </p>
+                      <p>{{restlist.address.street}},{{restlist.address.city}}</p>
+                    </mat-card-content>
+                    <mat-card-actions>
+                      <button mat-button class="category-btn">South Indian</button>
+                      <button mat-button class="category-btn" style="float:right">North Indian</button>
+                    </mat-card-actions>
+                    <mat-card-actions >
+                        <button mat-raised-button class="rating"  ><mat-icon >star</mat-icon> 4</button>
+                        <span style="float:right;margin-top:15px">Rs 200 for 2</span>
+                      </mat-card-actions>
+                  </mat-card>
+                </a>
+            </div>
+        </div>
+     
+   
