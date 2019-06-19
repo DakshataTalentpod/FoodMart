@@ -1,0 +1,27 @@
+.example-small-box, .example-large-box {
+    display: flex;
+    margin: 16px;
+    padding: 16px;
+    border-radius: 8px;
+  }
+  
+  .example-large-box {
+    height: 220px;
+    width: 60%;
+    padding: 20px 20px;
+    /* width: 300px; */
+  }
+  .order-text{
+      font-weight: bold;
+      font-size: 16px;
+      color:#3f51b5;
+  }
+  .order-text-small{
+    color:#3f51b5;
+    font-size: 14px; 
+    padding: 5px 8px;
+  }
+  .item-order{
+margin-right: 10px;
+padding: 5px 8px;
+  }

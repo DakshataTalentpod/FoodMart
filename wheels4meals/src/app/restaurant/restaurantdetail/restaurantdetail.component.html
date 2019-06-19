@@ -1,0 +1,25 @@
+<ul class="breadcrumb" >
+  <li><a routerLink="/restaurant">Restaurants</a></li>
+  <li><a routerLink="" *ngIf="rest$ | async as rest">{{rest.name}}</a></li>
+</ul>
+{{rest$ | async }}
+<div class="container"
+   fxLayout
+   fxLayout.xs="column"
+   fxLayoutAlign="center"
+   fxLayoutGap="10px"
+   fxLayoutGap.xs="0">
+<div class="item item-1" fxFlex="20%" *ngIf="rest$ | async as rest"><img src="{{rest.imageUrl}}" width="200px" height="200px" style="overflow: hidden"></div>
+<div class="item item-2" fxFlex fxFlexOrder="1"><button mat-raised-button color="primary" style="height: 40px">Edit Details</button></div>
+<div class="item item-3" fxFlex="70%" *ngIf="rest$ | async as rest"> 
+  <h3>{{rest.name}}</h3>
+  <span >{{rest.address.street}},{{rest.address.city}}</span><br>
+  <div style="margin-top: 20px"> 
+      <button mat-button class="category-btn" style="margin-right: 20px">South Indian</button>
+      <button mat-button class="category-btn" >North Indian</button>
+  </div>
+  <button mat-raised-button class="rating"  ><mat-icon >star</mat-icon> 4</button>
+  <span style="margin-top:15px;margin-left:20px">Rs 200 for 2</span>
+ 
+</div>
+</div>

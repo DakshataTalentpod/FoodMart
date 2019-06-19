@@ -1,5 +1,6 @@
 import { Restaurant } from "src/app/mock/restaurant";
 import { Food } from "src/app/mock/food";
+export const SORT={name:'Restaurant Name',averagePrice:'price',averageRating:'Rating'}
 export const RESTAURANTS:Restaurant[] = [
 {
     id: 5001,
@@ -20,7 +21,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.5,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5002,
@@ -40,7 +44,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.0,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5003,
@@ -60,7 +67,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.5,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5004,
@@ -80,7 +90,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:3.5,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5005,
@@ -100,7 +113,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.0,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5006,
@@ -120,7 +136,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.0,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5007,
@@ -140,7 +159,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.0,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 },
 {
     id:5008,
@@ -160,7 +182,10 @@ export const RESTAURANTS:Restaurant[] = [
     timings:'9.00am-10.00pm',
     reviewList:[],
     orderList:[],
-    notification:null
+    notification:null,
+    averageRating:4.0,
+    averagePrice:150,
+    type:['veg','Non-Veg']
 }
 ];
  

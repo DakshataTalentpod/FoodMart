@@ -12,19 +12,12 @@ export class CustomerComponent implements OnInit {
 restaurant=RESTAURANTS;
 name:string;
 isAsc: boolean = true;
-
-
-
-
-  constructor() { }
+constructor() { }
 
   ngOnInit() {
   }
- Search(){
-   this.restaurant=this.restaurant.filter(res=>{
-     return res.name.toLocaleLowerCase().match(this.name.toLocaleLowerCase());
-   });
- }
+  
+ 
 
  sortData() {
     return this.restaurant.sort((a,b) => 

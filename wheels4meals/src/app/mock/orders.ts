@@ -11,13 +11,14 @@ import { DeliveryPartnerReview } from './deliveryPartnerReview';
 
 export class Orders{
     id: number;
+    date:string;
     cart: Cart;
     payment: Payment;
     deliveryPartner: DeliveryPartner;
     userName: User;
     statusList: Status[];
-    address: Address[];
-    foodReview: FoodReview[];
+    address: Address;
+    foodReview: FoodReview;
     issue: Issue;
     deliveryPartnerReview: DeliveryPartnerReview;
 }

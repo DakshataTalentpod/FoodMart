@@ -86,7 +86,7 @@ export const FOODS:Food[] = [
         imageUrl: "assets\food\veg\veg\roti.jpeg",
         averageRating: 4.5,
         description: "1 leg piece,1 tikka piece with rice",
-        cuisine: "SouthIndian",
+        cuisine: "South Indian",
         type:"Veg",
     },
     {
@@ -114,7 +114,7 @@ export const FOODS:Food[] = [
     imageUrl: "assets\food\veg/chapati.jpeg",
     averageRating: 4.5,
     description: "Two chapati and twa types of curry",
-    cuisine: "southIndian",
+    cuisine: "South Indian",
     type:"Veg"
     },
     {
@@ -128,7 +128,7 @@ export const FOODS:Food[] = [
     imageUrl: "assets\food\veg\dhosa.jpeg",
     averageRating: 4.5,
     description: "Crispy dhosa with coconut chitney",
-    cuisine: "southIndian",
+    cuisine: "South Indian",
     type:"Veg"
     },
     {
@@ -142,7 +142,7 @@ export const FOODS:Food[] = [
     imageUrl: "assets\food\veg\idli.jpeg",
     averageRating: 4.5,
     description: "1 bowl of noodles ",
-    cuisine: "southIndian",
+    cuisine: "South Indian",
     type:"Veg"
     },
     {
@@ -170,7 +170,7 @@ export const FOODS:Food[] = [
     imageUrl: "assets\food\veg\palav.jpeg",
     averageRating: 4.5,
     description: "1 bowl of Palav",
-    cuisine: "southIndian",
+    cuisine: "South Indian",
     type:"Veg"
     },
     {

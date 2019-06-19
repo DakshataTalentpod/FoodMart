@@ -1,0 +1,19 @@
+.example-fill-remaining-space{
+    flex: 1 1 auto;
+}
+.text-logout{
+    font-size:15px;
+    padding: 20px;
+}
+.text-logout a{
+    color:white;
+    text-decoration: none;
+}
+.logo {
+    font-family: 'Playball', cursive;font-size: 28px;
+    color:white;
+}
+.logo a{
+    color:white;
+    text-decoration: none; 
+}

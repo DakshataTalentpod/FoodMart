@@ -17,4 +17,7 @@ export class Restaurant{
     reviewList: FoodReview[];
     orderList: Orders[];
     notification: Notification; 
+    averageRating:number;
+    averagePrice:number;
+    type:string[];
 }
