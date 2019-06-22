@@ -1,34 +1,34 @@
 <mat-dialog-content class="mat-typography" >
     <h3>Orders #454</h3><br>
+    <!-- {{order$ | async}} -->
     <div  fxLayout="row"
-    fxLayoutGap="10px">
-<div  fxLayout="column"
-fxLayoutGap="10px">
-<div fxLayout="column"
-fxLayoutGap="10px">
-  
-  <p>From Restaurant Name</p>
-</div>
-  <div fxLayout="row"
-  fxLayoutGap="10px">
-  <p>Badam Halwa</p><span fxFlex></span><p>25.00</p>
-  <!-- <p>Badam Halwa</p>
-  <p>Badam Halwa</p> -->
-  </div>
-  <span style="font-weight: bold">Bill Details</span>
-  <div fxLayout="row"
-  fxLayoutGap="10px">
+    fxLayoutGap="10px"  >
    
-    <p>Item Total</p><span fxFlex></span><p>25.00</p>
-  </div>
-    <div fxLayout="row"
+    <div  fxLayout="column"
+      fxLayoutGap="10px">
+
+    <div fxLayout="column"
+      fxLayoutGap="10px">
+          <p>From Restaurant Name</p>
+      </div>
+      {{order$|async}}
+        <div fxLayout="row"
+          fxLayoutGap="10px" *ngIf="order">
+        <p>{{order.cart.foodQuantityList[0].food.name}}</p><span fxFlex></span><p>{{order.cart.foodQuantityList[0].food.price}}</p>
+        </div>
+          <span style="font-weight: bold">Bill Details</span>
+          <div fxLayout="row"
+            fxLayoutGap="10px">
+           <p>Item Total</p><span fxFlex></span><p>{{order.cart.foodQuantityList[0].food.price}}</p>
+         </div>
+    <!-- <div fxLayout="row"
   fxLayoutGap="10px">
     <p>Delivery Fee</p><span fxFlex></span><p>20.00</p>
-    </div>
+    </div> -->
   <span class="hl"></span>
   <div fxLayout="row"
   fxLayoutGap="10px">
-    <p style="font-weight: bold">Bill Total</p><span fxFlex></span><p>45.00</p>
+    <p style="font-weight: bold">Bill Total</p><span fxFlex></span><p>{{order.cart.foodQuantityList[0].food.price}}</p>
   </div>
   <div>
     
@@ -38,9 +38,9 @@ fxLayoutGap="10px">
 <span class="vl"></span>
 <div>
   <p style="font-weight: bold">Delevered On</p>
-  <p>25/2/2019</p><span style="font-size: 12px">by Delevery person</span>
+  <p>{{order.cart.foodQuantityList[0].food.date}}</p><span style="font-size: 12px">by Delevery person</span>
   <p>Ratings</p>
-  <mat-icon>star</mat-icon>
+  <mat-icon>star</mat-icon>{{order.cart.foodQuantityList[0].food.averageRating}}
 </div>
 </div>
 

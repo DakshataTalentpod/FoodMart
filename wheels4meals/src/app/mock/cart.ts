@@ -4,5 +4,5 @@ import { Offers } from './offers';
 export class Cart{
     id: number;
     foodQuantityList: FoodQuantity[];
-    grantTotal: number;
+    grandTotal: number;
 }

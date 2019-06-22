@@ -16,7 +16,7 @@ const appRoutes: Routes = [
     // outlet: 'popup'
   },
   {
-    path: 'signOut',
+    path: 'signUp',
     component: SignUpComponent,
     // outlet: 'popup'
   },
@@ -31,7 +31,7 @@ const appRoutes: Routes = [
     // outlet: 'popup'
   },
 
-  { path: '',   redirectTo: '/restaurant', pathMatch: 'full' },
+  { path: '',   redirectTo: '/signIn', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

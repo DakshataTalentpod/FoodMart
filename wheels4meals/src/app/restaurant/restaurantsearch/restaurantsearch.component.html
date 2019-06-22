@@ -1,21 +1,7 @@
-<!-- <p class="mat-form-field--inline">
-  <mat-form-field>
-      <mat-label>Restaurants Name</mat-label>
-      <input matInput [(ngModel)]="name" (input)="Search()">
-    </mat-form-field>
-  <mat-form-field>
-      <mat-label>Location</mat-label>
-      <mat-select>
-        <mat-option *ngFor="let rest of restaurant" value={{rest.address.street}}>
-          {{rest.address.street}}
-        </mat-option>
-      </mat-select>
-    </mat-form-field>
-</p> -->
 <div>
   <mat-form-field appearance="outline">
     <mat-label>Restaurant Name</mat-label>
     <input matInput type="text" [formControl]="restaurantName">
   </mat-form-field>
-  <button (click)="search()" mat-raised-button color="primary">Search</button>
+  <button (click)="search()" mat-raised-button color="primary" style="margin-left: 10px;">Search</button>
 </div>

@@ -17,6 +17,7 @@ import { Food } from 'src/app/mock/food';
 export class FoodlistComponent implements OnInit {
 food$: Observable<Food[]>;
 selectedId:number;
+foodCart:Food[];
   constructor( private route: ActivatedRoute,
     private router: Router,
     private service: FoodService) { }
@@ -27,9 +28,15 @@ selectedId:number;
         this.selectedId = +params.get('id');
         return this.service.getFoods(this.selectedId);
       })
-    );
+    )
+    console.log(this.food$);
+    this.food$.forEach(data=>console.log(data))
   }
-  // search(){
-  //   this.service.filterByFoodType(this.restaurantName.value);
-  // }
+  addToCart(food1:Food){
+    this.service.addToCart(food1)
+    // this.service.cartObservable.subscribe(data => this.foodCart = data )
+  }
+  searchCategory(category){
+    this.food$ = this.service.getCategoryFood(category);
+  }
 }

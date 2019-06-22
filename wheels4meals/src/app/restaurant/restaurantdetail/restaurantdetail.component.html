@@ -1,4 +1,6 @@
-<ul class="breadcrumb" >
+<div>
+<div >
+  <ul class="breadcrumb" >
   <li><a routerLink="/restaurant">Restaurants</a></li>
   <li><a routerLink="" *ngIf="rest$ | async as rest">{{rest.name}}</a></li>
 </ul>
@@ -10,16 +12,19 @@
    fxLayoutGap="10px"
    fxLayoutGap.xs="0">
 <div class="item item-1" fxFlex="20%" *ngIf="rest$ | async as rest"><img src="{{rest.imageUrl}}" width="200px" height="200px" style="overflow: hidden"></div>
-<div class="item item-2" fxFlex fxFlexOrder="1"><button mat-raised-button color="primary" style="height: 40px">Edit Details</button></div>
-<div class="item item-3" fxFlex="70%" *ngIf="rest$ | async as rest"> 
+<div class="item item-2" fxFlex fxFlexOrder="1" fxFlex="25%" style="background-color: white;padding:20px 20px;height:auto;box-shadow: 0 3px 1px -2px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+"> <app-cart></app-cart></div>
+<div class="item item-3" fxFlex="65%" *ngIf="rest$ | async as rest"> 
   <h3>{{rest.name}}</h3>
   <span >{{rest.address.street}},{{rest.address.city}}</span><br>
   <div style="margin-top: 20px"> 
       <button mat-button class="category-btn" style="margin-right: 20px">South Indian</button>
       <button mat-button class="category-btn" >North Indian</button>
   </div>
-  <button mat-raised-button class="rating"  ><mat-icon >star</mat-icon> 4</button>
-  <span style="margin-top:15px;margin-left:20px">Rs 200 for 2</span>
+  <button mat-raised-button class="rating"  ><mat-icon >star</mat-icon> {{rest.averageRating}}</button>
+  <span style="margin-top:15px;margin-left:20px">Rs {{rest.averagePrice}} of 2</span>
  
+</div>
+</div>
 </div>
 </div>

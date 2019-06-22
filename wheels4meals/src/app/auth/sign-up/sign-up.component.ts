@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup, FormControl } from '@angular/forms';
 import{User} from '../../mock/user';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class SignUpComponent implements OnInit {
   registerForm: FormGroup;
   submitted = false;
   hide=true;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private router:Router) { }
 
   ngOnInit() {
     this.registerForm = this.formBuilder.group({
@@ -44,9 +45,12 @@ export class SignUpComponent implements OnInit {
     if (this.registerForm.invalid) {
         return;
     }
-
+let email=this.registerForm.get('contact').get('emailId').value;
+let password=this.registerForm.get('password').value;
+localStorage.setItem('email',email);
+localStorage.setItem('password',password);
     alert('SUCCESS!)');
-    console.log(this.registerForm.value);
+    this.router.navigate(['/signIn']);
     // console.log( this.f.name.value);
     // console.log( this.f.userName.value);
     // console.log( this.f.contact.value);

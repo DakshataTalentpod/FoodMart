@@ -11,11 +11,11 @@
         fxLayoutGap.xs="0">
      <div class="item item-1" fxFlex="20%">
       <ul>
-        <li>South Indian</li>
-        <li>North Indian</li>
-        <li>Desserts</li>
-        <li>Biryani </li>
-        <li>Starters</li>
+        <li (click)="searchCategory('southindian')"><a>South Indian</a></li>
+        <li (click)="searchCategory('northindian')">North Indian</li>
+        <li (click)="searchCategory('desserts')">Desserts</li>
+        <li (click)="searchCategory('biryani')">Biryani </li>
+        <li (click)="searchCategory('starters')">Starters</li>
       </ul>
       </div>
     <div class="item item-2" fxFlex fxFlexOrder="1" fxFlex="80%">
@@ -34,6 +34,7 @@
             <mat-card-actions>
               <span>INR {{food.price}}</span>
               <button mat-button>SHARE</button>
+              <button mat-raised-button color="primary"(click)="addToCart(food)">ADD TO CART</button>
             </mat-card-actions>
           </mat-card>
           </div>

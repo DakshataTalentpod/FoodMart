@@ -20,6 +20,8 @@ import { OrdersComponent } from './order/orders/orders.component';
 import { CartComponent } from './order/cart/cart.component';
 import { OrderdetailsComponent } from './order/orderdetails/orderdetails.component';
 import { VieworderComponent } from './order/vieworder/vieworder.component';
+import { LiveordersComponent } from './order/liveorders/liveorders.component';
+import { MatDialogModule } from '@angular/material';
 
 
 @NgModule({
@@ -39,7 +41,8 @@ import { VieworderComponent } from './order/vieworder/vieworder.component';
     OrdersComponent,
     CartComponent,
     OrderdetailsComponent,
-    VieworderComponent
+    VieworderComponent,
+    LiveordersComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +51,8 @@ import { VieworderComponent } from './order/vieworder/vieworder.component';
     FormsModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

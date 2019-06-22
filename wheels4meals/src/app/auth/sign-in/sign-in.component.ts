@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import{User} from '../../mock/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sign-in',
@@ -10,10 +11,13 @@ import{User} from '../../mock/user';
 export class SignInComponent implements OnInit {
 user:User=new User();
 logInForm:FormGroup;
+
+emailId:string;
+password:string;
 submitted = false;
 hide=true;
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder,private router:Router) { }
 
   ngOnInit() {
     this.logInForm = this.formBuilder.group({
@@ -27,14 +31,17 @@ hide=true;
   
   onLogInSubmit(){
     this.submitted = true;
-
-    // stop here if form is invalid
-    if (this.logInForm.invalid) {
-        return;
+this.emailId=localStorage.getItem('email');
+this.password=localStorage.getItem('password');
+if (this.logInForm.get('emailId').value==this.emailId && this.logInForm.get('password').value==this.password) {
+       alert("Login successful");
+       this.router.navigate(['/restaurant']);
     }
-
-    alert('SUCCESS!! ');
-    console.log(this.logInForm.value);
+else{
+  alert("Email or Password is wrong");
+  }
+   
+   
 }
   
 }

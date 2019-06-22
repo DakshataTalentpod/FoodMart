@@ -20,7 +20,6 @@ export class RestaurantdetailComponent implements OnInit {
       switchMap((params: ParamMap) =>
         this.service.getRestaurant(params.get('id')))
     );
-    // console.log(heroes$);
   }
 
 }

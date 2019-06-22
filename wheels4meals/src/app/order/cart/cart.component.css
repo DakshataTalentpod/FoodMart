@@ -1,0 +1,16 @@
+.cart{
+    padding-left: 10px;
+    background-color: white;
+    height: auto;
+    box-shadow: 10px 10px 10px gray;
+    padding: 20px 40px;
+}
+table tr td{
+    padding-right: 5px;
+}
+.btnCheckout{
+    font-size: 10px;
+    width:100px;
+    height:30px;
+    background-color:rgb(26,153,0);
+}
